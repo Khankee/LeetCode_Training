@@ -11,15 +11,18 @@ public class UnionFind {
     }
 
     public static boolean connected(int p, int q){
-        return id[p] == id[q];
+        return root(p) == root(q);
+    }
+
+    public static int root(int i){
+        while (i != id[i]) i = id[i];
+        return i;
     }
 
     public static void union(int p, int q){
-        int pid = id[p];
-        int qid = id[q];
-        for(int i = 0; i < id.length; i++){
-            if(id[i] == pid) id[i] = qid;
-        }
+        int i = root(p);
+        int j = root(q);
+        id[i] = j;
     }
 
     public static void main(String[] args) {
