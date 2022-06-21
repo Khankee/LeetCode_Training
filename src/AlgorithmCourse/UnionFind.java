@@ -2,9 +2,11 @@ package AlgorithmCourse;
 
 public class UnionFind {
     private static int[] id;
+    private static int[] sz;
 
     public static void QuickFindUF(int N){
         id = new int[N];
+        sz = new int[N];
         for(int i = 0; i < N; i++){
             id[i] = i;
         }
@@ -15,14 +17,19 @@ public class UnionFind {
     }
 
     public static int root(int i){
-        while (i != id[i]) i = id[i];
+        while (i != id[i]) {
+            id[i] = id[id[i]];
+            i = id[i];}
         return i;
     }
 
     public static void union(int p, int q){
         int i = root(p);
         int j = root(q);
-        id[i] = j;
+        if (i == j) return;
+        if (sz[i] < sz[j])  { id[i] = j; sz[j] += sz[i]; }
+        else                { id[j] = i; sz[i] += sz[j]; }
+
     }
 
     public static void main(String[] args) {
