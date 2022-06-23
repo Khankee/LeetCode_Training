@@ -6,7 +6,10 @@ public class FindMedianSortedArray {
         int[] nums1 = {1,2,3,4,11};
         int[] nums2 = {6,7,8,9,10};
         System.out.println(findMedianSortedArrays(nums1, nums2));
-
+        if("ne" == "ne"){
+            System.out.println("s");
+            String dd = "a";
+        }
     }
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2){
