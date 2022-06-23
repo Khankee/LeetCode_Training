@@ -25,7 +25,6 @@ public class ValidPalindrome680 {
                 if(s.charAt(saveBegin) == s.charAt(saveEnd)){
                     saveBegin++;
                     saveEnd--;
-                    left = true;
                 } else {
                     left = false;
                     break;
@@ -37,17 +36,12 @@ public class ValidPalindrome680 {
                 if(s.charAt(saveBegin) == s.charAt(saveEnd)){
                     saveBegin++;
                     saveEnd--;
-                    right = true;
                 } else {
                     right = false;
                     break;
                 }
             }
-            if(left || right){
-                return true;
-            } else {
-                return false;
-            }
+            return left || right;
         }
         return true;
     }
