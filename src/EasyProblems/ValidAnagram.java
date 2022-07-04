@@ -42,4 +42,52 @@ public class ValidAnagram {
 
         return map.isEmpty();
     }
+
+    //Improved version
+    public static boolean isAnagram2(String s, String t){
+        if (s == null || t == null || s.length() != t.length()) {
+            return false;
+        }
+        int len = s.length();
+        HashMap<Character, Integer> countMap = new HashMap<>();
+
+        for(int i = 0; i < len; i++){
+            char c = s.charAt(i);
+            countMap.put(c, countMap.getOrDefault(c, 0) + 1);
+        }
+
+        for (int i = 0; i < len; i++){
+            char c = t.charAt(i);
+            Integer count = countMap.get(c);
+            if (count == null) {
+                return false;
+            }
+            if (count.equals(1)) {
+                countMap.remove(c);
+            } else {
+                countMap.put(c, count - 1);
+            }
+        }
+
+        return true;
+    }
+
+    //most improved
+    public static boolean isAnagram3(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int[] counter = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            counter[s.charAt(i) - 'a']++;
+            counter[t.charAt(i) - 'a']--;
+        }
+        for (int count : counter) {
+            if (count != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
