@@ -18,10 +18,7 @@ public class ContainsDuplicate {
 
         Set<Integer> setList = new HashSet<>(list);
 
-        if(setList.size() == list.size()){
-            return false;
-        }
-        return true;
+        return setList.size() != list.size();
     }
 
     public static boolean containsDuplicateImproved(int[] nums){
