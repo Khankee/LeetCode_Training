@@ -32,8 +32,6 @@ public class ValidWordAbbreviation {
                 word = word.substring(0,i) + end + word.substring(end + i);
             }
         }
-        if(word.length() == abbr.length()) return true;
-
-        return false;
+        return word.length() == abbr.length();
     }
 }
