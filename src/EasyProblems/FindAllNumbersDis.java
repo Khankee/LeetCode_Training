@@ -1,12 +1,18 @@
 package EasyProblems;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class FindAllNumbersDis {
     public static void main(String[] args) {
+        PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());
+        heap.add(10);
+        heap.add(2);
+        heap.add(100);
 
+        int a = heap.poll();
+        System.out.println(a);
+        System.out.println(heap.poll());
+        System.out.println(heap.poll());
     }
 
     public static List<Integer> findDisappearedNumbers(int[] nums){
