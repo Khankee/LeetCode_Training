@@ -1,8 +1,8 @@
-package Learning;
+package Learning.UnionFind;
 
 public class UnionTest {
     public static void main(String[] args) {
-        UnionFind uf = new UnionFind(10);
+        UnionFindQuickFind uf = new UnionFindQuickFind(10);
         uf.union(1,2);
         uf.union(2,5);
         uf.union(5,6);

@@ -1,10 +1,10 @@
-package Learning;
+package Learning.UnionFind;
 
 //Quick Find O(1) (find)
-public class UnionFind {
+public class UnionFindQuickFind {
     private int[] root;
 
-    public UnionFind(int size){
+    public UnionFindQuickFind(int size){
         root = new int[size];
         for(int i = 0; i < size; i++){
             root[i] = i;

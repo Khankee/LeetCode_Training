@@ -1,4 +1,4 @@
-package Learning;
+package Learning.Help;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
