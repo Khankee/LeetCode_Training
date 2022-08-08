@@ -1,4 +1,4 @@
-package Learning;
+package Learning.Heap;
 
 import java.util.PriorityQueue;
 

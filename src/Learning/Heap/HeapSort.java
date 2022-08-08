@@ -1,4 +1,4 @@
-package Learning;
+package Learning.Heap;
 
 public class HeapSort {
     public void sort(int[] arr)

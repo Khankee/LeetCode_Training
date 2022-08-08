@@ -1,4 +1,4 @@
-package Learning;
+package Learning.LinkedList;
 
 public class MyLinkedList {
     private SinglyListNode head;
