@@ -10,6 +10,7 @@ public class UnionFindQuickUnion {
         }
     }
 
+    //find O(n)
     public int find(int x){
         while(x != root[x]){
             x = root[x];
@@ -17,6 +18,7 @@ public class UnionFindQuickUnion {
         return x;
     }
 
+    //Union O(1)
     public void union(int x, int y){
         int rootX = find(x);
         int rootY = find(y);
