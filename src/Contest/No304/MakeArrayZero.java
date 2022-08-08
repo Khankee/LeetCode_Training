@@ -1,4 +1,4 @@
-package Contest;
+package Contest.No304;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
