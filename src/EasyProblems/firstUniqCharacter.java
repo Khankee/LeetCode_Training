@@ -22,4 +22,17 @@ public class firstUniqCharacter {
 
         return -1;
     }
+
+    public static int firstUniqChar(String s){
+        int[] bucket = new int[26];
+        for(int i = 0; i < s.length(); i++){
+            bucket[s.charAt(i) - 'a'] += 1;
+        }
+        for(int i = 0; i < s.length(); i++){
+            if(bucket[s.charAt(i) - 'a'] == 1){
+                return 1;
+            }
+        }
+        return -1;
+    }
 }
