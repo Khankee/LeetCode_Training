@@ -4,7 +4,15 @@ import java.util.HashMap;
 
 public class firstUniqCharacter {
     public static void main(String[] args) {
+        long time1 = System.nanoTime();
+        System.out.println(firstUniqChar("helloworldhewrd"));
+        long time2 = System.nanoTime();
+        System.out.println(time2 - time1);
+
+        long time3 = System.nanoTime();
         System.out.println(firsUniqChar("helloworldhewrd"));
+        long time4 = System.nanoTime();
+        System.out.println(time4 - time3);
     }
 
     public static int firsUniqChar(String s){
