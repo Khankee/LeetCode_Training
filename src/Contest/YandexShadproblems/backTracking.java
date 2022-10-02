@@ -1,6 +1,7 @@
 package Contest.YandexShadproblems;
 
 import java.io.*;
+import java.util.List;
 
 public class backTracking {
     static boolean[][] seen;
