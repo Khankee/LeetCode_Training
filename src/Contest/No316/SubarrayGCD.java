@@ -25,13 +25,12 @@ public class SubarrayGCD {
         return gcd(b % a, a);
     }
 
-    int findGCD(int[] arr){
+    int findGCD(int[] arr) {
         int result = arr[0];
-        for (int element: arr){
+        for (int element : arr) {
             result = gcd(result, element);
 
-            if(result == 1)
-            {
+            if (result == 1) {
                 return 1;
             }
         }
