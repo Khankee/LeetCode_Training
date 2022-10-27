@@ -1,6 +1,6 @@
 package MediumProblems;
 
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
 
 public class CoinChange {
@@ -15,9 +15,9 @@ public class CoinChange {
         Arrays.fill(dp, max);
         dp[0] = 0;
         for (int i = 1; i <= amount; i++){
-            for(int j = 0; j < coins.length; j++){
-                if (coins[j] <= i) {
-                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+            for (int coin : coins) {
+                if (coin <= i) {
+                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
                 }
             }
         }
