@@ -58,7 +58,7 @@ public class I {
                     backtrack(tempRow, col, tempTurn,1);
                 }
             }
-        }// down
+        }
         if(direction != 1){
             if(row - 1 > 0){
                 if (maze[row - 1][col] == '.' || maze[row - 1][col] == 't'){
@@ -110,6 +110,5 @@ public class I {
                 }
             }
         }
-        // left
     }
 }
